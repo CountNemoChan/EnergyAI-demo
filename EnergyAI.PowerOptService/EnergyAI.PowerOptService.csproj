@@ -1,0 +1,25 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-EnergyAI.BuildCalculateService-2F50A9C5-10C2-4B36-8868-7C089FD0DAD0</UserSecretsId>
+    <ServerGarbageCollection>false</ServerGarbageCollection>
+    <!--- ServerGarbageCollection ： 服务器垃圾收集 ：不会让内存无限增长 -->
+    <ConcurrentGarbageCollection>true</ConcurrentGarbageCollection>
+    <!--- ServerGarbageCollection ： 并发垃圾收集 ：不会让内存无限增长 -->
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="6.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.Systemd" Version="6.0.0" />
+    <PackageReference Include="Microsoft.Extensions.Hosting.WindowsServices" Version="6.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CommonUntils\CommonUntils.csproj" />
+    <ProjectReference Include="..\EnergyAI.AILearn\EnergyAI.AILearn.csproj" />
+    <ProjectReference Include="..\EnergyAi.Core\EnergyAi.Core.csproj" />
+  </ItemGroup>
+</Project>
